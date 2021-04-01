@@ -12,7 +12,7 @@ def searchFile():
     if filePath is None:
         return
     print(filePath)
-    # 此处根据实际情况,进行字符编码设计
+    
     filename = filePath.split('/')[-1]
     print(filename)
     Type = filename[-3:]
