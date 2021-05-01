@@ -1,6 +1,6 @@
 import easygui as gui
-import os
-import Operator.pdfOperator
+from Operator import PdfPlumberOperator
+from Operator import DocumentOperator
 
 
 def searchFile():
@@ -24,7 +24,9 @@ def searchFile():
         searchFile()
     else:
         # 是pdf格式的文件
-        pdf = Operator.pdfOperator(filePath)
+        document = PdfPlumberOperator.pdf_operate(filePath)
+    print(document)
+    return document
 
 
 if __name__ == "__main__":
